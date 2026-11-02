@@ -1,0 +1,165 @@
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+body {
+  min-height: 100vh;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  background: #0b1020;
+  color: white;
+  font-family: Arial, sans-serif;
+  padding: 20px;
+}
+
+.container {
+  width: 100%;
+  max-width: 460px;
+  text-align: center;
+}
+
+header h1 {
+  font-size: 32px;
+  margin-bottom: 8px;
+}
+
+header span {
+  color: #7c83ff;
+}
+
+header p {
+  color: #929bb5;
+  font-size: 14px;
+}
+
+.stats {
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  gap: 10px;
+  margin: 28px 0 20px;
+}
+
+.stat {
+  background: #171f35;
+  border: 1px solid #29334d;
+  padding: 14px 5px;
+  border-radius: 14px;
+}
+
+.stat small {
+  color: #929bb5;
+  font-size: 10px;
+  letter-spacing: 1px;
+}
+
+.stat h2 {
+  margin-top: 8px;
+  font-size: 22px;
+}
+
+#next {
+  color: #8b91ff;
+}
+
+.game {
+  background: #171f35;
+  padding: 12px;
+  border-radius: 18px;
+  border: 1px solid #29334d;
+}
+
+.grid {
+  display: grid;
+  grid-template-columns: repeat(5, 1fr);
+  gap: 7px;
+}
+
+.cell {
+  aspect-ratio: 1;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  background: #283451;
+  border-radius: 10px;
+  font-size: clamp(17px, 5vw, 24px);
+  font-weight: bold;
+  cursor: pointer;
+  user-select: none;
+  transition: background 0.15s, transform 0.15s;
+}
+
+.cell:active {
+  transform: scale(0.90);
+}
+
+.cell.correct {
+  background: #236d61;
+  color: #a9ffe6;
+  pointer-events: none;
+}
+
+.cell.wrong {
+  background: #a43d53;
+}
+
+.progress {
+  height: 7px;
+  background: #283451;
+  border-radius: 20px;
+  margin-top: 20px;
+  overflow: hidden;
+}
+
+#progressBar {
+  height: 100%;
+  width: 0%;
+  background: #8187ff;
+  transition: width 0.2s;
+}
+
+#message {
+  color: #aab4ce;
+  margin: 18px 0;
+  font-size: 14px;
+}
+
+button {
+  width: 100%;
+  padding: 15px;
+  border: none;
+  border-radius: 12px;
+  background: #777fff;
+  color: white;
+  font-size: 16px;
+  font-weight: bold;
+  cursor: pointer;
+}
+
+button:hover {
+  background: #626af0;
+}
+
+button:focus-visible,
+.cell:focus-visible {
+  outline: 3px solid #c2c5ff;
+  outline-offset: 2px;
+}
+
+.best {
+  margin-top: 20px;
+  color: #929bb5;
+  font-size: 14px;
+}
+
+.best span {
+  color: #fff;
+  font-weight: bold;
+}
+
+@media (max-width: 360px) {
+  .game { padding: 8px; }
+  .grid { gap: 5px; }
+}

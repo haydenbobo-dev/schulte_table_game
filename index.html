@@ -1,0 +1,38 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta name="theme-color" content="#0b1020">
+  <title>Schulte Focus</title>
+  <link rel="stylesheet" href="style.css">
+</head>
+<body>
+  <main class="container">
+    <header>
+      <h1>Schulte <span>Focus</span></h1>
+      <p>Train your concentration and visual speed.</p>
+    </header>
+
+    <section class="stats" aria-label="Game statistics">
+      <div class="stat"><small>TIME</small><h2 id="timer">00:00.0</h2></div>
+      <div class="stat"><small>NEXT NUMBER</small><h2 id="next">01</h2></div>
+      <div class="stat"><small>MISTAKES</small><h2 id="mistakes">0</h2></div>
+    </section>
+
+    <section class="game" aria-label="Schulte number grid">
+      <div class="grid" id="grid"></div>
+    </section>
+
+    <div class="progress" aria-label="Progress">
+      <div id="progressBar"></div>
+    </div>
+
+    <p id="message" aria-live="polite">Find numbers in order from 1 to 25.</p>
+    <button id="restart" type="button">↻ New Game</button>
+
+    <div class="best">Best Time: <span id="bestTime">--:--.-</span></div>
+  </main>
+  <script src="script.js"></script>
+</body>
+</html>
